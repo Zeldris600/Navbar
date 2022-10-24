@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+
+.container{
+    box-sizing: border-box;
+   
+    margin: auto;
+    width: fit-content;
+    height: 50vh;
+}
+
+.main-box {
+  box-shadow: 0px 26px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 30vw;
+  height: fit-content;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+.min-header1{
+    
+    display: flex;
+    flex-direction: row;
+    border: 1rem;
+    width: 30vw;
+    margin: 2rem;
+    padding: auto;
+    align-items: center;
+    
+}
+h1{  font-size: large !important;
+    font-weight: 600 !important;
+}
+.x-icon{
+    position: relative;
+    left: 33rem;
+    
+    
+}
+button{
+    height: 0.5em;
+     width: 95%; 
+     margin-left: 14px !important;
+}
+.horizon{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+hr{
+    border: 0px solid black;
+    
+    
+}
+.form-body{
+ display: flex;
+ flex-direction: column;
+ padding: auto;
+ margin: 1rem;
+ width: 95%;
+ height: 50%;
+
+}
+.footer{
+    text-align: center;
+    padding: auto;
+}
+a {
+    color: blue !important;
+}
+.checkbox{
+    padding: auto;
+    margin: 1rem;
+}
+.icon{
+    margin: 1rem;
+}
+@media screen and (min-width: 300px) {
+    .main-box{
+        width: 80vw;
+    }
+    .x-icon{
+        left: 8rem;
+    }
+}
+
+@media screen  and (min-width: 500px){
+    .x-icon{
+        left: 19rem;
+    }
+}
+@media screen and (min-width: 990px)  {
+    .main-box{
+        width: 30vw;
+    }
+    .x-icon{
+        left: 15rem;
+    }
+}
+
