@@ -13,7 +13,7 @@ import {
   Checkbox,
 } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
-import Signup from './signup';
+import Signup from './Signup';
 
 const Login = () => {
   return (
@@ -62,4 +62,4 @@ const Login = () => {
   )
 }
 
-export default Login();
+export default Login;

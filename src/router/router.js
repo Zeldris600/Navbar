@@ -9,7 +9,7 @@ import Form from "../pages/Formhook";
 import log from "../pages/Login";
 import mess from "../pages/Messages";
 import set from "../pages/Settings";
-import signup from "../pages/signup";
+import Signup from "../pages/Signup";
 //import SignUp from "./pages/SignUp";
 import formhook from "../pages/Formhook";
 import Login from "../pages/Login";
@@ -27,7 +27,7 @@ const routes = [
   },
   {
     path: "/signup",
-    element: signup,
+    element: Signup,
   },
   {
     path: "/about-us",
