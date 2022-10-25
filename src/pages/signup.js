@@ -1,7 +1,7 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-import { Icon, SmallCloseIcon } from "@chakra-ui/icons";
-import "../assets/CSS/signup.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Icon, SmallCloseIcon } from '@chakra-ui/icons';
+import '../assets/CSS/signup.css';
 import {
   Input,
   FormControl,
@@ -11,16 +11,15 @@ import {
   IconButton,
   Button,
   Checkbox,
-} from "@chakra-ui/react";
-import { FcGoogle } from "react-icons/fc";
+} from '@chakra-ui/react';
+import { FcGoogle } from 'react-icons/fc';
 
-
-
-const Signup = () => {
-
+export const Signup = () => {
   /*  const [name,setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [name]
 
 
   const GetName = (e)=>{
@@ -51,8 +50,19 @@ const Signup = () => {
   e.preventDefault();
   localStorage.setItem('UserData', JSON.stringify(User))
 
-  } */ 
- 
+  } */
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = () => {
+    console.log(name, email, password);
+    localStorage.setItem('user-data', {
+      name,
+      email,
+      password,
+    });
+  };
 
   return (
     <div className="container">
@@ -60,39 +70,56 @@ const Signup = () => {
         <section className="header">
           <div className="min-header1">
             <h1>Sign up</h1>
-  
+
             <SmallCloseIcon className="x-icon" />
           </div>
-          <Button variant='outline' className="button" leftIcon={<FcGoogle/>}>
+          <Button variant="outline" className="button" leftIcon={<FcGoogle />}>
             Sign up with Google
           </Button>
           <div className="horizon">
-          <hr />
+            <hr />
           </div>
-         
         </section>
 
         <div className="form-body">
-          <FormControl >
+          <FormControl>
             <FormLabel>Name</FormLabel>
-            <Input type="text"   /* onChange={GetName} */  />
+            <Input type="text" onChange={(e) => setName(e.target.value)} />
             <FormLabel>Email</FormLabel>
-            <Input type="email" /*  onChange={GetEmail} */  />
+            <Input type="email" onChange={(e) => setEmail(e.target.value)} />
             <FormLabel>Password</FormLabel>
-            <Input type="password"   /* onChange={GetPassword} */  />
+            <Input
+              type="password"
+              onChange={(e) =>
+                setPassword(e.target.value)
+              } /* onChange={GetPassword} */
+            />
             {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
-            <div className="horizon"><hr /></div>
+            <div className="horizon">
+              <hr />
+            </div>
             <div className="check">
-              <Checkbox defaultChecked>I agree with <Link to="/terms">Terms</Link>  and <Link to="/privacy">Privacy</Link></Checkbox>
+              <Checkbox defaultChecked>
+                I agree with <Link to="/terms">Terms</Link> and{' '}
+                <Link to="/privacy">Privacy</Link>
+              </Checkbox>
             </div>
 
             <br />
-            <Button colorScheme="blue"   /* onSubmit={HandleSubmit} */ >Sign Up</Button>
-             <div className="horizon"> <hr /></div>
-           
+            <Button
+              onClick={handleSubmit}
+              colorScheme="blue" /* onSubmit={HandleSubmit} */
+            >
+              Sign Up
+            </Button>
+            <div className="horizon">
+              {' '}
+              <hr />
+            </div>
+
             <div className="footer">
               <h6>Already have an account? </h6>
-              <Link to="/login" >Log in</Link>
+              <Link to="/login">Log in</Link>
             </div>
           </FormControl>
         </div>
@@ -101,4 +128,4 @@ const Signup = () => {
   );
 };
 
-export default Signup();
+// export default Signup(); -> This is what u had before
